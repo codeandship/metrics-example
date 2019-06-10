@@ -17,10 +17,11 @@ Metrics Example
 	- Passwort: `admin`
 5. Prometheus als Datenquelle einbinden:
 	- Unter "Configuration" -> "Data Sources" -> "Add data source" Button anklicken
-	- Reiter Settings:
-		- "Prometheus auswählen"
+	- "Prometheus" auswählen
+	- Reiter "Settings":
 		- Im Abschnitt "HTTP" in das Feld "URL" `http://prometheus:9090` einfügen.
-	- Reiter  Dashboards:
+		- "Save & Test"
+	- Reiter "Dashboards":
 		- Hier können fertige Prometheus Dashboards importiert werden
 6. Über das "+" in der Seitenleiste -> "Import" wählen
 7. [example-dashboard.json](example-dashboard.json) Inhalt kopieren und einfügen, Import abschließen.
