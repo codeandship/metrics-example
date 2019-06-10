@@ -1,0 +1,21 @@
+version: "3"
+services:
+  app:
+    restart: always
+    build:
+      context: ./
+      dockerfile: Dockerfile
+  grafana:
+    image: grafana/grafana:latest
+    restart: always
+    ports:
+      - '3000:3000'
+    volumes: 
+      - './grafana/etc:/etc/grafana'
+  prometheus:
+    image: prom/prometheus:latest
+    restart: always
+    volumes: 
+      - './prometheus/data:/prometheus'
+      - './prometheus/config:/etc/prometheus/'
+    command: ['--config.file=/etc/prometheus/prometheus.yml', '--storage.tsdb.path=/prometheus']
